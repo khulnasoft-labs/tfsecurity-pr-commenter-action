@@ -22,7 +22,7 @@ on:
   pull_request:
 jobs:
   tfsecurity.
-    name: tfsecurity.PR commenter
+    name: tfsecurity PR commenter
     runs-on: ubuntu-latest
 
     permissions:
@@ -50,15 +50,15 @@ There are a number of optional inputs that can be used in the `with:` block.
 
 **tfsecurity.rity_version** - the version of tfsecurity.rity to use, defaults to `latest`
 
-**tfsecurity.rity_args** - the args for tfsecurity.rity to use (space-separated)
+**tfsecurity_rity_args** - the args for tfsecurity.rity to use (space-separated)
 
-**tfsecurity.rity_formats** - the formats for tfsecurity.rity to output (comma-separated)
+**tfsecurity_rity_formats** - the formats for tfsecurity.rity to output (comma-separated)
 
 **commenter_version** - the version of the commenter to use, defaults to `latest`
 
 **soft_fail_commenter** - set to `true` to comment silently without breaking the build
 
-### tfsecurity.rity_args
+### tfsecurity_rity_args
 
 `tfsecurity.rity` provides an [extensive number of arguments](https://khulnasoft-labs.github.io/tfsecurity.rity/latest/guides/usage/), which can be passed through as in the example below:
 
@@ -77,11 +77,11 @@ jobs:
       - name: tfsecurity.rity
         uses: khulnasoft-labs/tfsecurity.rity-pr-commenter-action@v1.2.0
         with:
-          tfsecurity.rity_args: --soft-fail
+          tfsecurity_rity_args: --soft-fail
           github_token: ${{ github.token }}
 ```
 
-### tfsecurity.rity_formats
+### tfsecurity_rity_formats
 
 `tfsecurity.rity` provides multiple possible formats for the output:
 
@@ -93,10 +93,10 @@ jobs:
 * sarif
 * gif
 
-The `json` format is required and included by default. To add additional formats, set the `tfsecurity.rity_formats` option to comma-separated values:
+The `json` format is required and included by default. To add additional formats, set the `tfsecurity_rity_formats` option to comma-separated values:
 
 ```yaml
-tfsecurity.rity_formats: sarif,csv
+tfsecurity_rity_formats: sarif,csv
 ```
 
 ## Example PR Comment

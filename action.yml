@@ -1,4 +1,4 @@
-name: "Run tfsecurity.PR commenter"
+name: "Run tfsecurity PR commenter"
 description: "Runs tfsecurity.and adds comments to the PR where checks have failed"
 author: "Owen Rumney"
 
@@ -12,16 +12,16 @@ inputs:
       Directory to run the action on, from the repo root.
       Default is . (root of the repository)
     default: "."
-  tfsecurity.version:
+  tfsecurity_version:
     required: false
     description: The version of tfsecurity.to use, defaults to latest
     default: latest
-  tfsecurity.rity_args:
+  tfsecurity_rity_args:
     required: false
     description: |
       Space-separated args specified here will be added during tfsecurity.execution.
       (e.g. --force-all-dirs --verbose)
-  tfsecurity.rity_formats:
+  tfsecurity_rity_formats:
     required: false
     description: |
       Comma-separated formats specified here will be output in addition to json.
@@ -34,7 +34,7 @@ inputs:
     required: false
     description: If set to `true` will silently comment without breaking the build
 outputs:
-  tfsecurity.return-code:
+  tfsecurity_return-code:
     description: "tfsecurity.command return code"
 runs:
   using: "docker"
