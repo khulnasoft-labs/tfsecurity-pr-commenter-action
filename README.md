@@ -1,7 +1,3 @@
-<p align="center">
-  <img width="354" src="./tfsecurity.png">
-</p>
-
 # tfsecurity-pr-commenter-action
 Add comments to pull requests where tfsecurity.checks have failed
 
