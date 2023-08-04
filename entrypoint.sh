@@ -46,7 +46,7 @@ function install_release {
 }
 
 install_release khulnasoft-labs/tfsecurity."${TFSECURITY_VERSION}" tfsecurity.tfsecurity.checksums.txt
-install_release khulnasoft-labs/tfsecurity.rity-pr-commenter-action "${COMMENTER_VERSION}" commenter checksums.txt
+install_release khulnasoft-labs/tfsecurity-pr-commenter-action "${COMMENTER_VERSION}" commenter checksums.txt
 
 if [ -n "${GITHUB_WORKSPACE}" ]; then
   cd "${GITHUB_WORKSPACE}" || exit

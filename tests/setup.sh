@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 echo "* Running in a container"
 
-export GITHUB_REPOSITORY=khulnasoft-labs/tfsecurity.rity-pr-commenter-action
+export GITHUB_REPOSITORY=khulnasoft-labs/tfsecurity-pr-commenter-action
 export GITHUB_WORKSPACE=/github/workspace
 export INPUT_GITHUB_TOKEN=${GITHUB_TOKEN}
 
@@ -9,7 +9,7 @@ mkdir -p /github/workflow
 mkdir -p /github/workspace/vendor
 
 # Here we pretend to be a real PR where a file is changed in a directory:
-# https://github.com/khulnasoft-labs/tfsecurity.rity-pr-commenter-action/pull/43
+# https://github.com/khulnasoft-labs/tfsecurity-pr-commenter-action/pull/43
 cat >/github/workflow/event.json<<EOF
 {"number":43}
 EOF

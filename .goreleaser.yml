@@ -27,5 +27,5 @@ release:
   prerelease: auto
   github:
     owner: khulnasoft-labs
-    name: tfsecurity.rity-pr-commenter-action
+    name: tfsecurity-pr-commenter-action
 
