@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - uses: actions/setup-go@v4
+    - uses: actions/setup-go@v5
       with:
         stable: 'true'
         go-version: '1.15' # The Go version to download (if necessary) and use.
