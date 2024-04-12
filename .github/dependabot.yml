@@ -1,10 +1,15 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: daily
-  - package-ecosystem: "gomod"
-    directory: "/"
+      interval: monthly
+    commit-message:
+      prefix: ⬆
+  - package-ecosystem: gomod
+    open-pull-requests-limit: 10
+    directory: /
     schedule:
-      interval: daily
+      interval: monthly
+    commit-message:
+      prefix: ⬆
